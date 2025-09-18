@@ -1,0 +1,393 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam Mishra - Full Stack Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+            --success-color: #198754;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 100px 0;
+            margin-top: 56px;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .bg-light-custom {
+            background-color: #f8f9fa;
+        }
+        
+        .skill-bar {
+            height: 25px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            border-radius: 5px;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            font-weight: 500;
+            transition: width 1s ease-in-out;
+        }
+        
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+            background-color: var(--dark-color);
+        }
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .skill-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .section-padding {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Shivam Mishra</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">Shivam Mishra</h1>
+                    <h2 class="text-primary mb-4">Full Stack Developer</h2>
+                    <p class="lead mb-4">Aspiring Full Stack Developer skilled in Frontend (HTML, CSS, Bootstrap, JavaScript) and Backend (Python – Django, MySQL). Adept at creating responsive, user-friendly applications and passionate about clean design and efficient coding.</p>
+                    <div class="d-flex gap-2">
+                        <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
+                        <a href="#contact" class="btn btn-outline-primary btn-lg">Contact Me</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="bg-primary rounded-circle p-5 text-white d-inline-block">
+                        <i class="fas fa-code fa-5x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Skills Section -->
+<section id="skills" class="section-padding bg-light-custom">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Technical Skills</h2>
+      <p class="text-muted">Here's what I bring to the table</p>
+    </div>
+
+    <!-- Skill Bars -->
+    <div class="row">
+      <div class="col-md-3 mb-4">
+        <div class="skill-bar"><div class="skill-progress" style="width: 90%">HTML5</div></div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="skill-bar"><div class="skill-progress" style="width: 85%">CSS3</div></div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="skill-bar"><div class="skill-progress" style="width: 80%">JavaScript</div></div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="skill-bar"><div class="skill-progress" style="width: 85%">Bootstrap</div></div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="skill-bar"><div class="skill-progress" style="width: 75%">Python</div></div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="skill-bar"><div class="skill-progress" style="width: 90%">Django</div></div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="skill-bar"><div class="skill-progress" style="width: 80%">C</div></div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="skill-bar"><div class="skill-progress" style="width: 70%">MySQL</div></div>
+      </div>
+    </div>
+
+    <!-- Skill Icons -->
+    <div class="row mt-5">
+      <div class="col-md-3 col-6 text-center mb-4"><div class="skill-icon"><i class="fab fa-html5"></i></div><h5>HTML5</h5></div>
+      <div class="col-md-3 col-6 text-center mb-4"><div class="skill-icon"><i class="fab fa-css3-alt"></i></div><h5>CSS3</h5></div>
+      <div class="col-md-3 col-6 text-center mb-4"><div class="skill-icon"><i class="fab fa-js-square"></i></div><h5>JavaScript</h5></div>
+      <div class="col-md-3 col-6 text-center mb-4"><div class="skill-icon"><i class="fab fa-bootstrap"></i></div><h5>Bootstrap</h5></div>
+      <div class="col-md-3 col-6 text-center mb-4"><div class="skill-icon"><i class="fab fa-python"></i></div><h5>Python</h5></div>
+      <div class="col-md-3 col-6 text-center mb-4"><div class="skill-icon"><i class="fas fa-leaf"></i></div><h5>Django</h5></div>
+      <div class="col-md-3 col-6 text-center mb-4"><div class="skill-icon"><i class="fas fa-code"></i></div><h5>C</h5></div>
+      <div class="col-md-3 col-6 text-center mb-4"><div class="skill-icon"><i class="fas fa-database"></i></div><h5>MySQL</h5></div>
+    </div>
+  </div>
+</section>
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">My Projects</h2>
+                <p class="text-muted">Check out some of my recent work</p>
+            </div>
+            
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card card">
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Full Stack</span>
+                            <h4 class="card-title">E-Commerce Restaurant Website</h4>
+                            <p class="card-text">Developed a full-stack restaurant e-commerce platform with online ordering, cart, and checkout functionality using Django.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item">User authentication (login/register)</li>
+                                <li class="list-group-item">Role-based access for customers and admins</li>
+                                <li class="list-group-item">Responsive frontend with Bootstrap</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary">HTML</span>
+                                <span class="badge bg-secondary">CSS</span>
+                                <span class="badge bg-secondary">Bootstrap</span>
+                                <span class="badge bg-secondary">JavaScript</span>
+                                <span class="badge bg-secondary">Python</span>
+                                <span class="badge bg-secondary">Django</span>
+                            </div>
+                            <a href="https://myproject-pspr.onrender.com/" target="_blank" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card card">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Frontend</span>
+                            <h4 class="card-title">Carbon Eve</h4>
+                            <p class="card-text">Built a carbon footprint calculator using HTML, CSS, Bootstrap, and JavaScript with a fully responsive front-end.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item">Fully responsive design</li>
+                                <li class="list-group-item">Clean and intuitive UI</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary">HTML</span>
+                                <span class="badge bg-secondary">CSS</span>
+                                <span class="badge bg-secondary">Bootstrap</span>
+                                <span class="badge bg-secondary">JavaScript</span>
+                            </div>
+                            <a href="https://carbon-ewe.vercel.app" target="_blank" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="project-card card">
+                        <div class="card-body">
+                            <span class="badge bg-success mb-2">Frontend</span>
+                            <h4 class="card-title">Business Operations Portal</h4>
+                            <p class="card-text">Designed and developed a business operations portal using core front-end technologies focused on delivering a clean, user-friendly UI.</p>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item">Clean and professional design</li>
+                                <li class="list-group-item">User-friendly interface</li>
+                                <li class="list-group-item">Deployed on Vercel</li>
+                            </ul>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary">HTML</span>
+                                <span class="badge bg-secondary">CSS</span>
+                                <span class="badge bg-secondary">JavaScript</span>
+                                <span class="badge bg-secondary">Bootstrap</span>
+                            </div>
+                            <a href="https://ease-of-business.vercel.app" target="_blank" class="btn btn-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light-custom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">About Me</h2>
+                    <p class="lead">I'm an aspiring Full Stack Developer currently pursuing a B.A. in Political Science (Hons.) at Delhi University.</p>
+                    <p>My unique background gives me a diverse perspective on problem-solving and user experience design. I'm passionate about creating applications that are not only functional but also provide exceptional user experiences.</p>
+                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or expanding my knowledge in political science and its intersection with technology.</p>
+                    <div class="mt-4">
+                        <h5>Education</h5>
+                        <p class="mb-1"><strong>Bachelor of Arts - Political Science (Hons.)</strong></p>
+                        <p class="mb-1">Delhi University, New Delhi</p>
+                        <p class="text-muted">2023 - Present</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow">
+                        <div class="card-body p-4">
+                            <h4 class="card-title mb-4">Personal Information</h4>
+                            <div class="row mb-3">
+                                <div class="col-sm-4"><p class="fw-bold">Name:</p></div>
+                                <div class="col-sm-8"><p>Shivam Mishra</p></div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-4"><p class="fw-bold">Email:</p></div>
+                                <div class="col-sm-8"><p>shivammi035@gmail.com</p></div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-4"><p class="fw-bold">Phone:</p></div>
+                                <div class="col-sm-8"><p>7835853106</p></div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-4"><p class="fw-bold">Address:</p></div>
+                                <div class="col-sm-8"><p>New Delhi, 110041</p></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4"><p class="fw-bold">Languages:</p></div>
+                                <div class="col-sm-8"><p>Hindi, English</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Get In Touch</h2>
+                <p class="text-muted">I'm available for freelance opportunities and full-time positions</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card border-0 shadow">
+                        <div class="card-body p-4 p-md-5">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label">Your Name</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Your Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="subject" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <h4 class="mb-4">Connect with me</h4>
+                <a href="https://www.linkedin.com/in/shivam-mishra-a6a84b348/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/shivam-1279" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="mailto:shivammi035@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 Shivam Mishra. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
